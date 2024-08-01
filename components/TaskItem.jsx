@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View, Pressable, Platform } from "react-native";
 import React, { useState } from "react";
 import RadioButton from "./RadioButton";
+import AntDesign from '@expo/vector-icons/AntDesign';
 const TaskItem = ({
   webDimensions,
   placeHolder,
   backgroundColor,
   mobileDimensions,
   eachTaskData,
+  onDeleteTask,
+  onCompleteTask
 }) => {
   const [selected, setSelected] = useState();
 
@@ -50,9 +53,9 @@ const TaskItem = ({
           <Text
             style={[
               styles.taskText,
-              selected && { textDecorationLine: "line-through" },
+              eachTaskData?.taskCurrentState && { textDecorationLine: "line-through" },
             ]}
-          ></Text>
+          >{eachTaskData.task}</Text>
         </Pressable>
       </View>
       <View style={styles.RadioButtonBody}>
@@ -60,16 +63,19 @@ const TaskItem = ({
           <Text
             style={[
               styles.taskText,
-              selected && { textDecorationLine: "line-through" },
+              eachTaskData?.taskCurrentState && { textDecorationLine: "line-through" },
             ]}
           >
             8:00 AM
           </Text>
         </Pressable>
         <RadioButton
-          onPress={() => setSelected(!selected)}
-          selected={selected}
+          onPress={() => onCompleteTask(eachTaskData.id)}
+          selected={eachTaskData?.taskCurrentState}
         />
+        <Pressable onPress={()=>onDeleteTask(eachTaskData.id)}>
+        <AntDesign name="delete" size={20} color="#CA8BFE" />
+        </Pressable>
       </View>
     </View>
   );
@@ -83,6 +89,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#ffffff",
     justifyContent: "space-between",
+   
   },
   pressableButton: {},
   RadioButtonBody: {

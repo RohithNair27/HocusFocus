@@ -6,9 +6,13 @@ const TextField = ({
   placeHolder,
   backgroundColor,
   mobileDimensions,
+  onTextChange,
+  value
 }) => {
   return (
     <TextInput
+    onChangeText={(text)=>onTextChange(text)}
+    value={value}
       style={
         Platform.OS === "web"
           ? {
