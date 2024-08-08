@@ -9,14 +9,12 @@ const Layout = () => {
     <Tabs
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: "#A18AFF",
+          backgroundColor: "#FE8D27",
           marginHorizontal: 10,
           position: "absolute",
           top: 15,
           borderWidth: 0,
           left: 10,
-          // right: 0,
-          // borderWidth: 1,
           width: "15%",
         },
       }}

@@ -12,7 +12,7 @@ const TaskItem = ({
   onCompleteTask
 }) => {
   const [selected, setSelected] = useState();
-
+  console.log(eachTaskData);
   return (
     <View
       style={
@@ -48,7 +48,7 @@ const TaskItem = ({
       }
     >
       <View style={styles.TaskBody}>
-        <Text style={{ marginRight: 10 }}>🟡</Text>
+      <View style={[{ backgroundColor: eachTaskData.category.color }, styles.circle]}/>
         <Pressable>
           <Text
             style={[
@@ -111,4 +111,13 @@ const styles = StyleSheet.create({
   taskText: {
     color: "#717012",
   },
+  circle: {
+    width: 15,
+    height: 15,
+    borderRadius: 25, // Half of width/height to make it a circle
+    margin: 5, // Space between the circles
+},
+yellow: {
+    backgroundColor: '#ffeb3b',
+},
 });

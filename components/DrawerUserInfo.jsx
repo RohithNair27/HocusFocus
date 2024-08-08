@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import UserProfile from "../assets/images/UserProfile";
+import Entypo from '@expo/vector-icons/Entypo';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import {
   DrawerContentScrollView,
   DrawerItemList,
@@ -9,42 +13,42 @@ const AppDrawerItem = (props) => {
   return (
     <>
       <View style={styles.drawerHeader}>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={{
-            borderColor: "#103550",
-            alignItems: "center",
-            marginBottom: 10,
-          }}
-          onPress={() => {
-            getMobilePermission("launchImage");
-          }}
-        ></TouchableOpacity>
-        <Text style={styles.drawerHeaderText}>Rohith K </Text>
-        <Text
-          style={{
-            ...styles.drawerHeaderText,
-            fontSize: 12,
-            color: "#777777",
-            fontWeight: "normal",
-          }}
-        >
-          HocusFocus
-        </Text>
+       
+        <UserProfile/>
+        <View>
+
+        <Text>HocusFocus</Text>
+        <Text style={{...styles.drawerHeaderText,width: 120 }} numberOfLines={1}>Rohith kizhakkerra</Text>
+        </View>
+         
       </View>
       <DrawerContentScrollView>
-        <DrawerItemList {...props} />
+      <DrawerItemList {...props} />
         <DrawerItem
           icon={() => {
-            // return <MaterialCommunityIcons size={24} name={"logout"} />;
+           return  <Entypo name="calendar" size={24} color="black" />
           }}
+          activeTintColor={'#FE8D27'}
           labelStyle={{ color: "black" }}
-          label="Logout"
+          label="Todays Task"
           //   onPress={() => onPressLogout()}
         />
+        {/* <DrawerItem
+        icon={()=><Ionicons name="settings-sharp" size={24} color="black" />}
+          labelStyle={{ color: "black" }}
+          label="Settings"
+          //   onPress={() => handlePress()}
+        /> */}
         <DrawerItem
+        icon={()=><AntDesign name="star" size={24} color="black" />}
           labelStyle={{ color: "black" }}
           label="Rate us"
+          //   onPress={() => handlePress()}
+        />
+        <DrawerItem
+        icon={()=><MaterialCommunityIcons name="logout" size={24} color="black" />}
+          labelStyle={{ color: "black" }}
+          label="Logout"
           //   onPress={() => handlePress()}
         />
       </DrawerContentScrollView>
@@ -57,13 +61,17 @@ const AppDrawerItem = (props) => {
 
 const styles = StyleSheet.create({
   drawerHeader: {
-    height: 170,
-    justifyContent: "center",
-    alignItems: "center",
+    height: 150,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-evenly',
+    borderBottomWidth:3,
+    borderColor:"#FE8D27",
+    marginHorizontal:20,
+    marginBottom:30,
   },
   drawerHeaderText: {
-    color: "#103550",
-
+    color: "#FE8D27",
     fontSize: 20,
     fontWeight: "bold",
   },
