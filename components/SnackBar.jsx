@@ -10,7 +10,7 @@ const SnackBar = () => {
   return (
     
       <Snackbar
-      style={{zIndex:-1,position:'relative'}}
+      style={{zIndex:1,position:'relative'}}
         visible={SnackBarVisible.visible}
         duration={2000}
         onDismiss={() => {

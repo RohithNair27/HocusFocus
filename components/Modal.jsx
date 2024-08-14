@@ -36,7 +36,9 @@ const CustomModal = ({ visible, type, onClose, onAction }) => {
     
               onAction(selectedCategory);
               onClose();
-            }}>Select</Pressable>
+            }}>
+              <Text>Select</Text>
+            </Pressable>
           </View>
         );
       case 'logout':
@@ -69,7 +71,9 @@ const CustomModal = ({ visible, type, onClose, onAction }) => {
     
               onAction();
               onClose();
-            }}>Select</Pressable>
+            }}>
+              <Text>Select</Text>
+            </Pressable>
           </View>
         );
     }
