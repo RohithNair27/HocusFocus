@@ -1,54 +1,14 @@
-> Edited for use in IDX on 07/09/12
+# 🎯 HocusFocus: Cross-Platform To-Do List & Pomodoro App
 
-# Welcome to your Expo app 👋
+HocusFocus is a productivity app designed to help you manage tasks and boost focus using the Pomodoro technique. Whether you're on the go 📱 or working from your desk 🖥️, HocusFocus offers a seamless experience across web and mobile—all powered by a **single codebase** thanks to **React Native**.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p>
+  <img src="https://reactnative.dev/img/header_logo.svg" alt="React Native" width="30" height="30"/> 
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="30" height="30"/> 
+  <img src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" alt="Redux" width="30" height="30"/> 
+  <img src="https://cdn-images-1.medium.com/fit/c/54/54/1*X-fapKtVHxMoxieIA7aKCg.png" alt="Expo" width="30" height="30"/>
+</p>
 
-## Get started
+HocusFocus runs seamlessly on both web and mobile platforms, leveraging a single codebase to provide a consistent user experience.
 
-#### Android
-
-Android previews are defined as a `workspace.onStart` hook and started as a vscode task when the workspace is opened/started.
-
-Note, if you can't find the task, either:
-- Rebuild the environment (using command palette: `IDX: Rebuild Environment`), or
-- Run `npm run android -- --tunnel` command manually run android and see the output in your terminal. The device should pick up this new command and switch to start displaying the output from it.
-
-In the output of this command/task, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You'll also find options to open the app's developer menu, reload the app, and more.
-
-#### Web
-
-Web previews will be started and managred automatically. Use the toolbar to manually refresh.
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Please note that this app is still under construction.** 🚧
